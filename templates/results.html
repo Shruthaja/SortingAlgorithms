@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Comparison</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+<a class="btn" href="/" ><i class="fa fa-home" style="font-size:40px;"></i></a>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+{{table|safe}}
+<br>
+<br>
+<br>
+<h2>Bar Graph of size vs time taken to Sort</h2>
+<div class="plotly-figure">
+  {{ plotly_figure|safe }}
+</div>
+<br>
+<br>
+<table id="tablearray">
+  <h2>Sorted Array of Size 100</h2>
+{% for i in range(sortedarray|length) %}
+  <tr>
+
+    <td>{{sortedarray[i]}}</td>
+
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
